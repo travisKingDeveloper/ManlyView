@@ -18,5 +18,5 @@
         "eject": "react-scripts eject",
         "servit": "npm run build && npm run serve"
     },
-    "homepage": "https://traviskingdeveloper.github.io/ManlyView/" //in order to let servit work this line needs to remove
+    "homepage": "https://traviskingdeveloper.github.io/ManlyView/"
 }
