@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from '../assets/logo.svg'
 import './App.css'
+import ManCave from './ManCave'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           To get started, edit <code>src/components/App.js</code> and save to reload.
         </p>
         <a href="#" className="button">I'm a Button</a>
+        <ManCave />
       </div>
     )
   }
