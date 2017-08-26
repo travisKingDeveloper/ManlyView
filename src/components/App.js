@@ -1,23 +1,18 @@
 import React, { Component } from 'react'
-import MaintenanceView from './MaintenanceView'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 import ManlyView from './ManlyView'
 
 class App extends Component {
 
-    isUnderMaintenance(){
-        return true
-    }
-
     render() {
-        if(this.isUnderMaintenance()) {
-            return (
-              <MaintenanceView />
-            )
-        } else {
-            return ( 
-              <ManlyView />
-            )
-        }
+        return (
+            <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+                <ManlyView />
+            </MuiThemeProvider>
+        )
     }
 }
 
