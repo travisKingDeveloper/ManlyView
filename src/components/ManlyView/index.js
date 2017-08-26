@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.png'
+import './ManlyView.css'
 
 import ManCave from './ManCave'
 import util from '../SocialMediaUtility'
