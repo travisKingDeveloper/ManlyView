@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 import logo from '../../assets/logo.png'
 import './ManlyView.css'
 
-import ManCave from './ManCave'
 import util from '../SocialMediaUtility'
 import Header from '../Header'
+import ManCard from '../Card'
 
 class ManlyView extends Component {
   render() {
@@ -14,9 +14,8 @@ class ManlyView extends Component {
         <Header>
           <img src={logo} className="logo"/>
         </Header>
-        <util.Facebook />
-        <ManCave />
-        
+
+        <ManCard />
       </div>
     )
   }

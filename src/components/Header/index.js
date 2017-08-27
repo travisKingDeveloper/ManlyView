@@ -7,7 +7,7 @@ class Header extends React.Component {
   render() {
     return(
       <div>
-        <AppBar title="Manly View">
+        <AppBar title="The Manly View">
           {this.props.children}
         </AppBar>
       </div>
