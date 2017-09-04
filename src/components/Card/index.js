@@ -1,36 +1,70 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 
-import rickandmorty from '../../assets/rickandmorty.jpg'
+import manCard_BW from '../../assets/ManCard-BW.jpg'
 import logo from '../../assets/logo.png'
+import twoGents from '../../assets/TwoGents.jpg'
+import allOfThem from '../../assets/allOfThem.jpg'
 
-const ManCard = (props) => {
-    return (
-        <Card>
-            <CardHeader
-                title="The Manly View"
-                subtitle="The Gents with Two Cents"
-                avatar={logo}
-            />
-            <CardMedia
-                overlay={<CardTitle title="Rick and Morty Placeholder" subtitle="I seriously have no idea (I also Do not own this image, kudos to the artist)" />}
-            >
-                <img src={rickandmorty} alt="Rick and Morty Placeholder"/>
-            </CardMedia>
-            
-            <CardText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-            </CardText>
-            <CardActions>
-                <FlatButton label="Action1" />
-                <FlatButton label="Action2" />
-            </CardActions>
-        </Card>
-    )
+import './mancard.css';
+
+export default class ManCard extends Component {
+    constructor(args) {
+        super(args)
+
+        this.state = {
+            currentPicture: 'bw',
+        }
+    }
+
+    static ManCardImages = {
+        BlackWhite: 'bw',
+        TwoGents:   'tg',
+        AllOfThem:  'all',
+    }
+
+    renderImage = () => {
+        switch(this.state.currentPicture){
+            case ManCard.ManCardImages.BlackWhite: 
+                return manCard_BW
+            case ManCard.ManCardImages.TwoGents:
+                return twoGents
+            case ManCard.ManCardImages.AllOfThem:
+                return allOfThem
+            default:
+                return manCard_BW
+        }
+    }
+
+    setImageState(image) {
+        this.setState(x => x.currentPicture = image);
+    }
+
+    render() {
+        return (
+            <Card>
+                <CardHeader
+                    title="The Manly View"
+                    subtitle="The Gents with Two Cents"
+                    avatar={logo}
+                />
+                <CardMedia
+                    overlay={
+                        <CardTitle 
+                            title="The Boys from the Manly View" 
+                            subtitle="The Gents with Two Cents" 
+                        />}
+                >
+                    <img src={this.renderImage()} alt="Pictures Describing the Gents with Two Cents" className="man-card"/>
+                </CardMedia>
+                
+                <CardActions>
+                    <FlatButton label="Some Gents" onClick={() => this.setImageState(ManCard.ManCardImages.BlackWhite)} />
+                    <FlatButton label="Recording Session!" onClick={() => this.setImageState(ManCard.ManCardImages.TwoGents)} />
+                    <FlatButton label="The Boys Are Back In Town" onClick={() => this.setImageState(ManCard.ManCardImages.AllOfThem)} />
+                </CardActions>
+            </Card>
+        )
+    }
 }
-
-export default ManCard
