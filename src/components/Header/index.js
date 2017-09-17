@@ -1,45 +1,23 @@
-import React, {Component} from 'react';
-import AppBar from 'material-ui/AppBar';
+import React, { Component } from 'react'
+import AppBar from 'material-ui/AppBar'
+import Toolbar from 'material-ui/Toolbar';
 import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import Toggle from 'material-ui/Toggle';
-import Menu from 'material-ui/svg-icons/navigation/menu';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import MenuIcon from 'material-ui-icons/Menu';
 
+import Navigation from './Navigation'
 import logo from '../../assets/logo.png'
 import './header.css'
 
-const Navigation = () => (
-  <IconMenu
-    iconButtonElement={
-      <IconButton><Menu /></IconButton>
-    }
-    targetOrigin={{horizontal: 'right', vertical: 'top'}}
-    anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-  >
-    <MenuItem primaryText="Refresh" />
-    <MenuItem primaryText="Help" />
-    <MenuItem primaryText="Sign out" />
-  </IconMenu>
-);
 
-Navigation.muiName = 'IconMenu';
-
-class AppBarExampleComposition extends Component {
+export default class Header extends Component {
 
   render() {
     return (
       <div>
-        <AppBar
-          title="Title"
-          iconElementLeft={<Navigation />}
-          iconElementRight={<img className="header-image" src={logo} alt="Manly View"/>}
-        />
+        <AppBar position="fixed">
+          <Navigation/>
+        </AppBar>
       </div>
     );
   }
 }
-
-export default AppBarExampleComposition;
