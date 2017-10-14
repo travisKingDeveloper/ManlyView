@@ -68,15 +68,15 @@ export default class ShowcaseCard extends Component {
                 <CardActions>
                     <Tabs value={this.state.currentPicture} onChange={this.setImageState}>
                         <Tab
-                            label="Some Gents"
+                            label="The Gents"
                             value={ShowcaseCard.ManCardImages.BlackWhite}
                         />
                         <Tab
-                            label="Recording Session!"
+                            label="Hanging Out!"
                             value={ShowcaseCard.ManCardImages.TwoGents}
                         />
                         <Tab
-                            label="The Boys Are Back In Town"
+                            label="Chilling"
                             value={ShowcaseCard.ManCardImages.AllOfThem}
                         />
                     </Tabs>

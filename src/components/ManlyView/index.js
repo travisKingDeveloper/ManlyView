@@ -19,12 +19,12 @@ class ManlyView extends Component {
         </div>
         <div className="manly-view">
           <Grid container spacing={16}>
-            <Grid item xs sm={4}>
+            <Grid item xs md={4}>
               <div className="full-width">
                 <BroOgraphies />
               </div>
             </Grid>
-            <Grid item xs sm>
+            <Grid item xs md>
               <div className="full-width">
                 <ShowcaseCard />
               </div>
