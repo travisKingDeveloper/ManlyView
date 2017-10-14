@@ -14,18 +14,23 @@ class ManlyView extends Component {
   render() {
     return (
       <div>
-        <Grid container spacing={16}>
-          <Grid item xs sm={4}>
-            <div className="full-width">
-              <BroOgraphies />
-            </div>
-          </Grid>
-          <Grid item xs sm>
-            <div className="full-width">
-              <ShowcaseCard />
-            </div>
-          </Grid>
+        <div>
+          <Header />
+        </div>
+        <div className="manly-view">
+          <Grid container spacing={16}>
+            <Grid item xs sm={4}>
+              <div className="full-width">
+                <BroOgraphies />
+              </div>
+            </Grid>
+            <Grid item xs sm>
+              <div className="full-width">
+                <ShowcaseCard />
+              </div>
+            </Grid>
         </Grid>
+        </div>
       </div>
     )
   }

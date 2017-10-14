@@ -4,24 +4,6 @@ import Avatar from 'material-ui/Avatar'
 import Paper from 'material-ui/Paper'
 import { withStyles } from 'material-ui/styles'
 
-// const ProfileAvatar = (props) => {
-//     return(
-//         <div className="avatar">
-//             <Paper circle={true} zDepth={5}>
-//                 <img src={props.url} />
-//             </Paper>
-//         </div>
-//     );
-// }
-
-// const ProfileAvatar = (props) => {
-//     return(
-//         <Paper>
-//             <img src={props.url} />
-//         </Paper>    
-//     )
-// }
-
 const style = {
     bigAvatar: {
         width: 80,
