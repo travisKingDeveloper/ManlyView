@@ -17,13 +17,19 @@ const style = {
 }
 
 const ProfileAvatar = (props) => {
-    const classes = props.classes;
+    const {
+        classes,
+        profile: {
+            url,
+            name,
+        }
+    } = props;
 
     return(
-        <div onClick={() => props.onClick(props.name)}>
+        <div onClick={() => props.onClick(props.profile)}>
             <Avatar 
-                src={props.url} 
-                className={props.selected(props.name) ? classes.selectedAvatar : classes.bigAvatar } 
+                src={url} 
+                className={props.selected(name) ? classes.selectedAvatar : classes.bigAvatar } 
             />
         </div>
     )

@@ -10,3 +10,7 @@
 .manly-view {
     margin-top: 3rem;
 }
+
+.centered {
+    align-self: center;
+}

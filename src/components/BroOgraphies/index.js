@@ -4,50 +4,44 @@ import Grid from 'material-ui/Grid'
 
 import ProfileAvatar from './ProfileAvatar'
 import Profiles from '../../util/Profiles'
+import BIO from './BIO'
 import './BroOgraphies.css'
 
 export default class BroOgraphies extends Component {
   state = {
-    selectedBro: Profiles.Arman.name
+    selectedBro: Profiles.Arman,
   }
 
-  changeBro = (name) => {
-    this.setState({ selectedBro: name});
+  changeBro = (profile) => {
+    this.setState({ selectedBro: profile });
   }
 
   render() {
     const profilesProps = {
       onClick: this.changeBro,
-      selected: (name) => this.state.selectedBro === name,
+      selected: (name) => this.state.selectedBro.name === name,
     }
 
     return (
-      <div>
+      <div className="biographies">
         <Grid className="avatars">
           <Grid item xs>
-            <ProfileAvatar 
-                name={Profiles.Arman.name} url={Profiles.Arman.url}
-                {...profilesProps}
-            />
+            <ProfileAvatar profile={Profiles.Arman} {...profilesProps} />
           </Grid>
           <Grid item xs>
-            <ProfileAvatar 
-                name={Profiles.Chris.name} url={Profiles.Chris.url} 
-                {...profilesProps}    
-            />
+            <ProfileAvatar profile={Profiles.Chris} {...profilesProps} />
           </Grid>
           <Grid item xs>
-            <ProfileAvatar 
-                name={Profiles.Isaiah.name} url={Profiles.Isaiah.url} 
-                {...profilesProps}
-            />
+            <ProfileAvatar profile={Profiles.Isaiah} {...profilesProps} />
           </Grid>
           <Grid item xs>
-            <ProfileAvatar 
-                name={Profiles.Matt.name} url={Profiles.Matt.url} 
-                {...profilesProps}
-            />
+            <ProfileAvatar profile={Profiles.Matt} {...profilesProps} />
           </Grid>
+        </Grid>
+        <Grid item xs>
+          <BIO headline={this.state.selectedBro.name}>
+            {this.state.selectedBro.bio}
+          </BIO>
         </Grid>
       </div>
     );
