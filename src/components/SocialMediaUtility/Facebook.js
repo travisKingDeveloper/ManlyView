@@ -3,7 +3,7 @@ import FacebookProvider, { Like } from 'react-facebook';
 
 export default function Facebook(props) {
   const style = {
-    display: 'inline-block'
+    display: 'inline-block',
   }
   return (
     <span style={style}>

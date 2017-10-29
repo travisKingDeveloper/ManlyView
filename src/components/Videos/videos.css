@@ -5,9 +5,9 @@
 
 .video {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 .video-selector {
     display:flex;
@@ -28,4 +28,9 @@
 }
 .video-selector__title--selected {
     text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    justify-content: columns;
 }

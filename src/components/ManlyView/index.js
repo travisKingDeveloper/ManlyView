@@ -5,7 +5,6 @@ import Button from 'material-ui/Button'
 import logo from '../../assets/logo.png'
 import './ManlyView.css'
 
-import util from '../SocialMediaUtility'
 import Header from '../Header'
 import ShowcaseCard from '../ShowcaseCard'
 import BroOgraphies from '../BroOgraphies'

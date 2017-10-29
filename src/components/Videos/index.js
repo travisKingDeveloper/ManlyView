@@ -10,6 +10,8 @@ import logo from '../../assets/logo.png'
 
 import VideoSelector from './VideoSelector'
 import videos from '../../util/Videos'
+import Facebook from '../SocialMediaUtility/Facebook'
+import Twitter from '../SocialMediaUtility/Twitter'
 
 export default class Videos extends Component {
     constructor(args) {
@@ -52,6 +54,10 @@ export default class Videos extends Component {
                         controls
                         width="95%"
                     />
+                    <div className="socials">
+                        <Facebook />
+                        <Twitter />
+                    </div>
                 </Grid>
                 {videoComponenets}
             </Grid>

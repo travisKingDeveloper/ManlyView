@@ -8,7 +8,6 @@ import Button from 'material-ui/Button'
 import IconButton from 'material-ui/IconButton'
 import MenuIcon from 'material-ui-icons/Menu'
 
-import Facebook from '../SocialMediaUtility/Facebook'
 import logo from '../../assets/logo.png'
 
 const styles = theme => ({
