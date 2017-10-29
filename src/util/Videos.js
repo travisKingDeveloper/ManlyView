@@ -21,4 +21,24 @@ export default [
         title: "The Driver's View",
         img: logo,
     },
+    {
+        url: "https://www.youtube.com/watch?v=y4RVKl4WTJc",
+        title: "The Bro Code! Part 1",
+        img: logo,
+    },
+    {
+        url: "https://www.youtube.com/watch?v=cvlufb6y6QI",
+        title: "Wierdest Food Combos!",
+        img: logo,
+    },
+    {
+        url: "https://www.youtube.com/watch?v=6dhwuqgQrTg",
+        title: "Ultimate Man Cave",
+        img: logo,
+    },
+    {
+        url:"https://www.youtube.com/watch?v=Ox2ZQaQ6Hl0",
+        title: "Manly Awkward Moments",
+        img: logo,
+    }
 ]

@@ -49,7 +49,9 @@ export default class Videos extends Component {
                 <Grid item xs={12} className="video">
                     <ReactPlayer
                         url={this.state.selectedVideo.url} 
-                        />
+                        controls
+                        width="95%"
+                    />
                 </Grid>
                 {videoComponenets}
             </Grid>
