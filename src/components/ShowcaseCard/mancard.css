@@ -3,6 +3,17 @@
     height: 40rem;
 }
 
+.showcase-avatar {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+}
+
+.showcase-avatar img {
+    width: 100px;
+    height: 100px; 
+} /* Matches the size of the logo we have, update that update this :( */
+
 /* PHones */
 @media (min-width: 480px) {
     height: 20rem;

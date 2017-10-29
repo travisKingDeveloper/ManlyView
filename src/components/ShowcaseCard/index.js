@@ -14,6 +14,8 @@ import logo from '../../assets/logo.png'
 import twoGents from '../../assets/TwoGents.jpg'
 import allOfThem from '../../assets/allOfThem.jpg'
 
+import ShowcaseAvatar from './ShowcaseAvatar'
+
 import './mancard.css';
 
 export default class ShowcaseCard extends Component {
@@ -22,13 +24,11 @@ export default class ShowcaseCard extends Component {
 
         const keys = Object.keys(ShowcaseCard.ManCardImages)
         const current = ShowcaseCard.ManCardImages[keys[(Math.random() * keys.length) << 0]] //Bit Wise operator Rounds down from 2.9 > 2
-        console.log(current);
 
         this.state = {
             currentPicture: current,
         }
     }
-
 
     static ManCardImages = {
         BlackWhite: 'bw',
@@ -59,9 +59,9 @@ export default class ShowcaseCard extends Component {
                 <CardHeader
                     title="The Manly View"
                     subtitle="The Gents with Two Cents"
-                    avatar={<img src={logo} />}
+                    avatar={<ShowcaseAvatar logo={logo} />}
                 />
-                <CardMedia image="" title="The Gents with Two Cents">
+                <CardMedia title="The Gents with Two Cents">
                     <img src={this.renderImage()} className="man-card"/>
                 </CardMedia>
 

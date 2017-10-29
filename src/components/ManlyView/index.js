@@ -9,6 +9,7 @@ import util from '../SocialMediaUtility'
 import Header from '../Header'
 import ShowcaseCard from '../ShowcaseCard'
 import BroOgraphies from '../BroOgraphies'
+import Videos from '../Videos'
 
 class ManlyView extends Component {
   render() {
@@ -29,7 +30,10 @@ class ManlyView extends Component {
                 <ShowcaseCard />
               </div>
             </Grid>
-        </Grid>
+          </Grid>
+          <div className="full-width videos">
+            <Videos />
+          </div>
         </div>
       </div>
     )

@@ -1,0 +1,31 @@
+.playing-video {
+    align-self: center;
+    width:100%
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+
+.video-selector {
+    display:flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between; 
+    height:10rem;
+}
+.video-selector__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.video-selector__image {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+}
+.video-selector__title--selected {
+    text-decoration: underline;
+}
